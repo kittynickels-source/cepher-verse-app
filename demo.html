@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Hebrew reveal — demo</title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<main>
+<h1>Tap a name</h1>
+<p class="note">Sample verses (public-domain KJV wording with Cepher-style names). Tap an underlined name to see its Hebrew; tap it again, tap elsewhere, scroll, or press Esc to close.</p>
+<div id="samples"></div>
+</main>
+<script src="js/hebrew-reveal.js"></script>
+<script src="js/hebrew-speech.js"></script>
+<script src="js/learn.js"></script>
+<script src="js/bible-data.js"></script>
+<script src="js/app-shell.js"></script>
+<script>
+var SAMPLES = [
+  ['Genesis 1:1', 'In the beginning Elohiym created את the heaven and את the earth.'],
+  ['Exodus 20:11', 'For in six days Yahuah made heaven and earth, the sea, and all that in them is, and rested the seventh day: wherefore Yahuah blessed the Shabbath day, and hallowed it.'],
+  ['Matthew 1:1', 'The book of the generation of Yahusha Ha\u2019Mashiach, the son of David, the son of Avraham.'],
+  ['Matthew 1:2', 'Avraham begat Yitschaq; and Yitschaq begat Ya`aqov; and Ya`aqov begat Yahudah and his brethren;'],
+  ['Psalm 91:1', 'He that dwelleth in the secret place of El Elyon shall abide under the shadow of El Shaddai.'],
+  ['Isaiah 2:3', 'For out of Tsiyon shall go forth the Torah, and the word of Yahuah from Yerushalayim.'],
+  ['Joshua 3:17', 'And the priests that bare the ark of the covenant of Yahuah stood firm on dry ground in the midst of Yarden, and all Yashar\u2019el passed over.'],
+  ['Matthew 1:18', 'When as his mother Miryam was espoused to Yoceph, before they came together, she was found with child of the Ruach Ha\u2019Qodesh.']
+];
+AppShell.init({ page: 'demo', nav: true }).then(function (ctx) {
+  var root = document.getElementById('samples');
+  SAMPLES.forEach(function (s) {
+    var r = document.createElement('p'); r.className = 'ref'; r.textContent = s[0];
+    var v = document.createElement('p'); v.className = 'verse';
+    ctx.render(v, s[1], { ref: s[0], raw: true });
+    root.appendChild(r); root.appendChild(v);
+  });
+});
+</script>
+</body>
+</html>

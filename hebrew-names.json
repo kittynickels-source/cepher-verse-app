@@ -1,0 +1,1051 @@
+{
+ "description": "Cepher-style Hebrew names -> Hebrew script. Matching is case-insensitive; apostrophe variants (' ’ ‘ ` ʼ) are interchangeable; a trailing possessive 's is allowed. 'english' lists the KJV/PD words the demo optionally swaps for the Cepher form (case-sensitive).",
+ "version": 1,
+ "entries": [
+  {
+   "id": "yahuah-tsevaoth",
+   "forms": [
+    "Yahuah Tseva'oth",
+    "Yahuah Tseva'ot",
+    "YHWH Tseva'oth"
+   ],
+   "hebrew": "יהוה צבאות",
+   "pointed": "",
+   "pronunciation": "yah-hoo-ah tseh-vah-oht",
+   "meaning": "Yahuah of hosts (armies)",
+   "english": [
+    "the LORD of hosts",
+    "The LORD of hosts",
+    "LORD of hosts"
+   ],
+   "confidence": "high",
+   "note": "Cepher form 'Yahuah Tseva'oth' seen on cepher.net (Isa 14, Rev 1:8).",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "yahuah-elohiym",
+   "forms": [
+    "Yahuah Elohiym"
+   ],
+   "hebrew": "יהוה אלהים",
+   "pointed": "",
+   "pronunciation": "yah-hoo-ah eh-lo-heem",
+   "meaning": "Yahuah (the) Mighty One",
+   "english": [
+    "the LORD God",
+    "The LORD God",
+    "LORD God"
+   ],
+   "confidence": "high",
+   "note": "Cepher Rev 1:8 'Yahuah Elohiym'.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "adonai-yahuah",
+   "forms": [
+    "Adonai Yahuah",
+    "Adonay Yahuah"
+   ],
+   "hebrew": "אדני יהוה",
+   "pointed": "",
+   "pronunciation": "ah-doh-nigh yah-hoo-ah",
+   "meaning": "Master Yahuah",
+   "english": [
+    "Lord GOD"
+   ],
+   "confidence": "medium",
+   "note": "Hebrew is standard (Adonai YHWH); exact Cepher rendering of KJV 'Lord GOD' not verified.",
+   "source": ""
+  },
+  {
+   "id": "yahuah",
+   "forms": [
+    "Yahuah",
+    "YHWH",
+    "YHVH",
+    "Yahweh",
+    "Jehovah"
+   ],
+   "hebrew": "יהוה",
+   "pointed": "",
+   "pronunciation": "yah-hoo-ah",
+   "meaning": "The Name: He who is / I AM",
+   "english": [
+    "the LORD",
+    "The LORD",
+    "LORD",
+    "GOD",
+    "JEHOVAH",
+    "Jehovah",
+    "Yahweh"
+   ],
+   "confidence": "high",
+   "note": "Cepher preface sets forth Yahuah (יהוה) and pronounces it 'yah-hoo-ah'. Vowel pointing intentionally omitted.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "yah",
+   "forms": [
+    "Yah"
+   ],
+   "hebrew": "יה",
+   "pointed": "יָהּ",
+   "pronunciation": "yah",
+   "meaning": "Short form of Yahuah",
+   "english": [],
+   "confidence": "high",
+   "note": "Cepher uses 'Yah' standalone (Matt 1:20, Rom 8:39).",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "elohiym",
+   "forms": [
+    "Elohiym",
+    "Elohim"
+   ],
+   "hebrew": "אלהים",
+   "pointed": "אֱלֹהִים",
+   "pronunciation": "eh-lo-heem",
+   "meaning": "Mighty One(s), God",
+   "english": [
+    "God"
+   ],
+   "confidence": "high",
+   "note": "Cepher spelling 'Elohiym' verified (Gen 1:1, John 1:1). Lower-case 'elohiym' = gods, same Hebrew.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "eloah",
+   "forms": [
+    "Eloah"
+   ],
+   "hebrew": "אלוה",
+   "pointed": "אֱלוֹהַּ",
+   "pronunciation": "eh-lo-ah",
+   "meaning": "Mighty One (singular)",
+   "english": [],
+   "confidence": "high",
+   "note": "Listed on cepher.net Sacred Names.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "el-shaddai",
+   "forms": [
+    "El Shaddai"
+   ],
+   "hebrew": "אל שדי",
+   "pointed": "אֵל שַׁדַּי",
+   "pronunciation": "el shah-dye",
+   "meaning": "Almighty El",
+   "english": [
+    "God Almighty"
+   ],
+   "confidence": "high",
+   "note": "Cepher Ps 91:1.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "el-elyon",
+   "forms": [
+    "El Elyon"
+   ],
+   "hebrew": "אל עליון",
+   "pointed": "אֵל עֶלְיוֹן",
+   "pronunciation": "el el-yohn",
+   "meaning": "El Most High",
+   "english": [
+    "most High God"
+   ],
+   "confidence": "high",
+   "note": "Cepher Ps 91:1, Isa 14:14.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "el",
+   "forms": [
+    "El"
+   ],
+   "hebrew": "אל",
+   "pointed": "אֵל",
+   "pronunciation": "el",
+   "meaning": "Mighty One, God",
+   "english": [],
+   "confidence": "high",
+   "note": "Cepher uses 'El' standalone ('stars of El', 'our El is with me').",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "adonai",
+   "forms": [
+    "Adonai",
+    "Adonay"
+   ],
+   "hebrew": "אדני",
+   "pointed": "אֲדֹנָי",
+   "pronunciation": "ah-doh-nigh",
+   "meaning": "My Master, Lord",
+   "english": [
+    "Lord"
+   ],
+   "confidence": "high",
+   "note": "Cepher Rom 8:39 'our Adonai'; listed in Sacred Names.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "yahusha-hamashiach",
+   "forms": [
+    "Yahusha Ha'Mashiach",
+    "Yahusha ha Mashiach"
+   ],
+   "hebrew": "יהושע המשיח",
+   "pointed": "",
+   "pronunciation": "yah-hoo-shah hah-mah-shee-ahk",
+   "meaning": "Yahusha the Anointed",
+   "english": [
+    "Jesus Christ",
+    "Christ Jesus"
+   ],
+   "confidence": "high",
+   "note": "Cepher Matt 1:1, Phil 2:11.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "yahusha",
+   "forms": [
+    "Yahusha"
+   ],
+   "hebrew": "יהושע",
+   "pointed": "",
+   "pronunciation": "yah-hoo-shah",
+   "meaning": "Yahuah saves",
+   "english": [
+    "Jesus",
+    "Joshua",
+    "Jesus'"
+   ],
+   "confidence": "high",
+   "note": "Cepher preface: Yahusha (יהושע); Cepher also uses Yahusha for Joshua son of Nun. Pointing omitted (Cepher vocalization differs from Masoretic).",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "yehoshua",
+   "forms": [
+    "Yehoshua"
+   ],
+   "hebrew": "יהושע",
+   "pointed": "יְהוֹשֻׁעַ",
+   "pronunciation": "yeh-ho-shoo-ah",
+   "meaning": "Yahuah saves",
+   "english": [],
+   "confidence": "medium",
+   "note": "Masoretic form; Cepher itself writes Yahusha for Joshua, so this spelling may not appear in Cepher text.",
+   "source": ""
+  },
+  {
+   "id": "hamashiach",
+   "forms": [
+    "Ha'Mashiach",
+    "HaMashiach"
+   ],
+   "hebrew": "המשיח",
+   "pointed": "הַמָּשִׁיחַ",
+   "pronunciation": "hah-mah-shee-ahk",
+   "meaning": "the Anointed One",
+   "english": [
+    "the Christ"
+   ],
+   "confidence": "high",
+   "note": "Cepher 'Ha'Mashiach'.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "mashiach",
+   "forms": [
+    "Mashiach"
+   ],
+   "hebrew": "משיח",
+   "pointed": "מָשִׁיחַ",
+   "pronunciation": "mah-shee-ahk",
+   "meaning": "Anointed One, Messiah",
+   "english": [
+    "Christ",
+    "Messiah",
+    "Messias"
+   ],
+   "confidence": "high",
+   "note": "Cepher Matt 1:16.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "ruach-haqodesh",
+   "forms": [
+    "Ruach Ha'Qodesh",
+    "Ruach HaQodesh",
+    "Ruach ha'Qodesh"
+   ],
+   "hebrew": "רוח הקדש",
+   "pointed": "רוּחַ הַקֹּדֶשׁ",
+   "pronunciation": "roo-ahk hah-koh-desh",
+   "meaning": "the Holy Spirit (set-apart breath)",
+   "english": [
+    "Holy Ghost",
+    "Holy Spirit"
+   ],
+   "confidence": "high",
+   "note": "Cepher Matt 1:18.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "ruach-elohiym",
+   "forms": [
+    "Ruach Elohiym"
+   ],
+   "hebrew": "רוח אלהים",
+   "pointed": "רוּחַ אֱלֹהִים",
+   "pronunciation": "roo-ahk eh-lo-heem",
+   "meaning": "Spirit of Elohiym",
+   "english": [
+    "Spirit of God"
+   ],
+   "confidence": "high",
+   "note": "Listed in cepher.net Sacred Names.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "ruach",
+   "forms": [
+    "Ruach"
+   ],
+   "hebrew": "רוח",
+   "pointed": "רוּחַ",
+   "pronunciation": "roo-ahk",
+   "meaning": "Spirit, breath, wind",
+   "english": [],
+   "confidence": "high",
+   "note": "Cepher Joel 2:28 'my Ruach'.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "immanuel",
+   "forms": [
+    "Immanu'el",
+    "Immanuel",
+    "Emmanuel"
+   ],
+   "hebrew": "עמנואל",
+   "pointed": "עִמָּנוּ אֵל",
+   "pronunciation": "ee-mah-noo-el",
+   "meaning": "El with us",
+   "english": [
+    "Emmanuel",
+    "Immanuel"
+   ],
+   "confidence": "high",
+   "note": "Cepher Matt 1:23.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "aleph-tav",
+   "forms": [
+    "את",
+    "Aleph-Tav",
+    "Aleph Tav",
+    "Eth"
+   ],
+   "hebrew": "את",
+   "pointed": "אֵת",
+   "pronunciation": "aleph-tav (eht)",
+   "meaning": "First and last letters (Aleph & Tav); the untranslated object marker Cepher prints inline",
+   "english": [],
+   "confidence": "high",
+   "note": "Cepher prints את inline (Gen 1:1, John 1:1). Plain 'et' deliberately NOT matched to avoid false hits (Latin 'et', 'et al.').",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "heylel",
+   "forms": [
+    "Heylel"
+   ],
+   "hebrew": "הילל",
+   "pointed": "הֵילֵל",
+   "pronunciation": "hay-lel",
+   "meaning": "Shining one (KJV 'Lucifer')",
+   "english": [
+    "Lucifer"
+   ],
+   "confidence": "high",
+   "note": "Cepher Isa 14:12.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "satan",
+   "forms": [
+    "Satan",
+    "ha'Satan"
+   ],
+   "hebrew": "שטן",
+   "pointed": "שָׂטָן",
+   "pronunciation": "sah-tahn",
+   "meaning": "Adversary",
+   "english": [],
+   "confidence": "medium",
+   "note": "Hebrew certain; Cepher's exact spelling not verified on a public page.",
+   "source": ""
+  },
+  {
+   "id": "yasharel",
+   "forms": [
+    "Yashar'el",
+    "Yisra'el",
+    "Yisrael",
+    "Yashar'al"
+   ],
+   "hebrew": "ישראל",
+   "pointed": "יִשְׂרָאֵל",
+   "pronunciation": "yah-shar-el (Cepher) / yis-rah-el",
+   "meaning": "Prince of El / he strives with El",
+   "english": [
+    "Israel"
+   ],
+   "confidence": "high",
+   "note": "Cepher 2022 key and Millennium Edition use 'Yashar'el'; older key 'Yisra'el'. Both mapped.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "avraham",
+   "forms": [
+    "Avraham",
+    "Abraham"
+   ],
+   "hebrew": "אברהם",
+   "pointed": "אַבְרָהָם",
+   "pronunciation": "av-rah-hahm",
+   "meaning": "Father of a multitude",
+   "english": [
+    "Abraham"
+   ],
+   "confidence": "high",
+   "note": "",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "yitschaq",
+   "forms": [
+    "Yitschaq"
+   ],
+   "hebrew": "יצחק",
+   "pointed": "יִצְחָק",
+   "pronunciation": "yits-hahk",
+   "meaning": "He laughs",
+   "english": [
+    "Isaac"
+   ],
+   "confidence": "high",
+   "note": "",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "yaaqov",
+   "forms": [
+    "Ya'aqov"
+   ],
+   "hebrew": "יעקב",
+   "pointed": "יַעֲקֹב",
+   "pronunciation": "yah-ah-kohv",
+   "meaning": "Heel-holder (supplanter)",
+   "english": [
+    "Jacob",
+    "James"
+   ],
+   "confidence": "high",
+   "note": "Cepher uses Ya'aqov for both Jacob and James (often with a backtick: Ya`aqov).",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "mosheh",
+   "forms": [
+    "Mosheh"
+   ],
+   "hebrew": "משה",
+   "pointed": "מֹשֶׁה",
+   "pronunciation": "moh-sheh",
+   "meaning": "Drawn out",
+   "english": [
+    "Moses"
+   ],
+   "confidence": "high",
+   "note": "",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "aharon",
+   "forms": [
+    "Aharon"
+   ],
+   "hebrew": "אהרן",
+   "pointed": "אַהֲרֹן",
+   "pronunciation": "ah-hah-rohn",
+   "meaning": "",
+   "english": [
+    "Aaron"
+   ],
+   "confidence": "high",
+   "note": "",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "david",
+   "forms": [
+    "Dawid",
+    "David"
+   ],
+   "hebrew": "דוד",
+   "pointed": "דָּוִד",
+   "pronunciation": "dah-veed",
+   "meaning": "Beloved",
+   "english": [
+    "David"
+   ],
+   "confidence": "high",
+   "note": "cepher.net Matt 1 shows 'David'; 'Dawid' kept as a variant.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "shalomah",
+   "forms": [
+    "Shalomah",
+    "Shelomoh",
+    "Shlomo"
+   ],
+   "hebrew": "שלמה",
+   "pointed": "שְׁלֹמֹה",
+   "pronunciation": "shah-loh-mah",
+   "meaning": "Peaceable",
+   "english": [
+    "Solomon"
+   ],
+   "confidence": "high",
+   "note": "Cepher spelling is 'Shalomah' (not Shelomoh).",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "eliyahu",
+   "forms": [
+    "Eliyahu",
+    "Eliyah"
+   ],
+   "hebrew": "אליהו",
+   "pointed": "אֵלִיָּהוּ",
+   "pronunciation": "eh-lee-yah-hoo",
+   "meaning": "My El is Yah",
+   "english": [
+    "Elijah",
+    "Elias"
+   ],
+   "confidence": "medium",
+   "note": "Hebrew certain; Cepher spelling 'Eliyahu' not verified on a public page.",
+   "source": ""
+  },
+  {
+   "id": "yeshayahu",
+   "forms": [
+    "Yesha'yahu"
+   ],
+   "hebrew": "ישעיהו",
+   "pointed": "יְשַׁעְיָהוּ",
+   "pronunciation": "yeh-shah-yah-hoo",
+   "meaning": "Yah is salvation",
+   "english": [
+    "Isaiah",
+    "Esaias"
+   ],
+   "confidence": "high",
+   "note": "",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "yirmeyahu",
+   "forms": [
+    "Yirmeyahu"
+   ],
+   "hebrew": "ירמיהו",
+   "pointed": "יִרְמְיָהוּ",
+   "pronunciation": "yeer-meh-yah-hoo",
+   "meaning": "Yah exalts",
+   "english": [
+    "Jeremiah",
+    "Jeremy",
+    "Jeremias"
+   ],
+   "confidence": "high",
+   "note": "",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "yechezqel",
+   "forms": [
+    "Yechezq'el"
+   ],
+   "hebrew": "יחזקאל",
+   "pointed": "יְחֶזְקֵאל",
+   "pronunciation": "yeh-khez-kel",
+   "meaning": "El strengthens",
+   "english": [
+    "Ezekiel"
+   ],
+   "confidence": "high",
+   "note": "",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "daniyel",
+   "forms": [
+    "Daniy'el",
+    "Daniye'l",
+    "Daniyel"
+   ],
+   "hebrew": "דניאל",
+   "pointed": "דָּנִיֵּאל",
+   "pronunciation": "dah-nee-yel",
+   "meaning": "El is my judge",
+   "english": [
+    "Daniel"
+   ],
+   "confidence": "high",
+   "note": "",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "shemuel",
+   "forms": [
+    "Shemu'el"
+   ],
+   "hebrew": "שמואל",
+   "pointed": "שְׁמוּאֵל",
+   "pronunciation": "sheh-moo-el",
+   "meaning": "Heard of El",
+   "english": [
+    "Samuel"
+   ],
+   "confidence": "high",
+   "note": "",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "yahuchanon",
+   "forms": [
+    "Yahuchanon"
+   ],
+   "hebrew": "יהוחנן",
+   "pointed": "",
+   "pronunciation": "yah-hoo-khah-nahn",
+   "meaning": "Yahuah is gracious",
+   "english": [],
+   "confidence": "low",
+   "note": "Cepher uses Yahuchanon for John the Baptizer. Hebrew shown is the full theophoric form יהוחנן (assumed from the spelling); the Masoretic short form is יוחנן. Cepher's own Hebrew not verified.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "yochanon",
+   "forms": [
+    "Yochanon",
+    "Yochanan"
+   ],
+   "hebrew": "יוחנן",
+   "pointed": "יוֹחָנָן",
+   "pronunciation": "yoh-khah-nahn",
+   "meaning": "Yah is gracious",
+   "english": [
+    "John"
+   ],
+   "confidence": "high",
+   "note": "Cepher: Yochanon = John the Apostle (Besorah Yochanon).",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "miryam",
+   "forms": [
+    "Miryam"
+   ],
+   "hebrew": "מרים",
+   "pointed": "מִרְיָם",
+   "pronunciation": "meer-yahm",
+   "meaning": "",
+   "english": [
+    "Mary",
+    "Miriam"
+   ],
+   "confidence": "high",
+   "note": "Cepher Matt 1. Meaning disputed, left blank.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "yoceph",
+   "forms": [
+    "Yoceph",
+    "Yoseph",
+    "Yosef"
+   ],
+   "hebrew": "יוסף",
+   "pointed": "יוֹסֵף",
+   "pronunciation": "yoh-sef",
+   "meaning": "He adds",
+   "english": [
+    "Joseph"
+   ],
+   "confidence": "high",
+   "note": "Cepher spelling is 'Yoceph'.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "noach",
+   "forms": [
+    "Noach",
+    "Nuach"
+   ],
+   "hebrew": "נח",
+   "pointed": "נֹחַ",
+   "pronunciation": "noh-ahk",
+   "meaning": "Rest",
+   "english": [
+    "Noah",
+    "Noe"
+   ],
+   "confidence": "high",
+   "note": "Cepher spelling is 'Noach'; 'Nuach' kept as a requested variant (not seen in Cepher).",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "chuah",
+   "forms": [
+    "Chuah",
+    "Chavvah",
+    "Chavah"
+   ],
+   "hebrew": "חוה",
+   "pointed": "חַוָּה",
+   "pronunciation": "khoo-ah (Cepher) / khah-vah",
+   "meaning": "Life-giver",
+   "english": [
+    "Eve"
+   ],
+   "confidence": "high",
+   "note": "Cepher spelling is 'Chuah' for Eve.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "adam",
+   "forms": [
+    "Adam"
+   ],
+   "hebrew": "אדם",
+   "pointed": "אָדָם",
+   "pronunciation": "ah-dahm",
+   "meaning": "Man, mankind (from adamah, ground)",
+   "english": [
+    "Adam"
+   ],
+   "confidence": "high",
+   "note": "",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "chanoch",
+   "forms": [
+    "Chanoch",
+    "Chanok"
+   ],
+   "hebrew": "חנוך",
+   "pointed": "חֲנוֹךְ",
+   "pronunciation": "khah-nokh",
+   "meaning": "Dedicated",
+   "english": [
+    "Enoch"
+   ],
+   "confidence": "high",
+   "note": "",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "miykael",
+   "forms": [
+    "Miyka'el"
+   ],
+   "hebrew": "מיכאל",
+   "pointed": "מִיכָאֵל",
+   "pronunciation": "mee-kah-el",
+   "meaning": "Who is like El?",
+   "english": [
+    "Michael"
+   ],
+   "confidence": "high",
+   "note": "Cepher Dan 12:1.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "kepha",
+   "forms": [
+    "Kepha",
+    "Kephas"
+   ],
+   "hebrew": "כיפא",
+   "pointed": "",
+   "pronunciation": "kay-fah",
+   "meaning": "Rock (Aramaic)",
+   "english": [
+    "Peter",
+    "Cephas"
+   ],
+   "confidence": "medium",
+   "note": "Cepher spelling verified; Kepha is Aramaic, so the Hebrew-script form (כיפא) is the Aramaic spelling Cepher may or may not print.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "shaul",
+   "forms": [
+    "Sha'ul"
+   ],
+   "hebrew": "שאול",
+   "pointed": "שָׁאוּל",
+   "pronunciation": "shah-ool",
+   "meaning": "Asked for",
+   "english": [
+    "Saul",
+    "Paul"
+   ],
+   "confidence": "medium",
+   "note": "Older Cepher key: Sha'ul = Paul; 2022 key and Millennium Ed. use Pa'al for Paul. Same letters as She'ol.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "paal",
+   "forms": [
+    "Pa'al"
+   ],
+   "hebrew": "פעל",
+   "pointed": "",
+   "pronunciation": "pah-ahl",
+   "meaning": "",
+   "english": [],
+   "confidence": "low",
+   "note": "Cepher 2022 key gives Pa'al for Paul. Hebrew spelling is a guess from the transliteration; meaning left blank.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "yahudah",
+   "forms": [
+    "Yahudah"
+   ],
+   "hebrew": "יהודה",
+   "pointed": "",
+   "pronunciation": "yah-hoo-dah",
+   "meaning": "Praise",
+   "english": [
+    "Judah",
+    "Juda",
+    "Judas"
+   ],
+   "confidence": "high",
+   "note": "Cepher Matt 1:2. Pointing omitted (Cepher vocalization differs from Masoretic יְהוּדָה).",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "yerushalayim",
+   "forms": [
+    "Yerushalayim"
+   ],
+   "hebrew": "ירושלים",
+   "pointed": "",
+   "pronunciation": "yeh-roo-shah-lah-yeem",
+   "meaning": "",
+   "english": [
+    "Jerusalem"
+   ],
+   "confidence": "high",
+   "note": "Cepher Key. Pointing omitted (Masoretic form is irregular). Meaning debated, left blank.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "mitsrayim",
+   "forms": [
+    "Mitsrayim"
+   ],
+   "hebrew": "מצרים",
+   "pointed": "מִצְרַיִם",
+   "pronunciation": "meets-rah-yeem",
+   "meaning": "Egypt",
+   "english": [
+    "Egypt"
+   ],
+   "confidence": "high",
+   "note": "",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "kenaan",
+   "forms": [
+    "Kena'an"
+   ],
+   "hebrew": "כנען",
+   "pointed": "כְּנַעַן",
+   "pronunciation": "keh-nah-ahn",
+   "meaning": "Canaan",
+   "english": [
+    "Canaan",
+    "Chanaan"
+   ],
+   "confidence": "high",
+   "note": "Cepher writes Kena`an (backtick); matched.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "babel",
+   "forms": [
+    "Babel",
+    "Bavel"
+   ],
+   "hebrew": "בבל",
+   "pointed": "בָּבֶל",
+   "pronunciation": "bah-vel",
+   "meaning": "Babylon",
+   "english": [
+    "Babylon"
+   ],
+   "confidence": "high",
+   "note": "Cepher spelling is 'Babel'.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "tsiyon",
+   "forms": [
+    "Tsiyon",
+    "Tziyon"
+   ],
+   "hebrew": "ציון",
+   "pointed": "צִיּוֹן",
+   "pronunciation": "tsee-yohn",
+   "meaning": "Zion",
+   "english": [
+    "Zion",
+    "Sion"
+   ],
+   "confidence": "medium",
+   "note": "Hebrew certain; Cepher spelling 'Tsiyon' follows Cepher's ts convention but not verified on a public page.",
+   "source": ""
+  },
+  {
+   "id": "yarden",
+   "forms": [
+    "Yarden",
+    "Yardan"
+   ],
+   "hebrew": "ירדן",
+   "pointed": "יַרְדֵּן",
+   "pronunciation": "yar-den",
+   "meaning": "Descender (the Jordan)",
+   "english": [
+    "Jordan"
+   ],
+   "confidence": "high",
+   "note": "Cepher keys give both Yarden (older) and Yardan (2022).",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "torah",
+   "forms": [
+    "Torah",
+    "Torah's"
+   ],
+   "hebrew": "תורה",
+   "pointed": "תּוֹרָה",
+   "pronunciation": "toh-rah",
+   "meaning": "Instruction, law",
+   "english": [],
+   "confidence": "medium",
+   "note": "Hebrew certain; Cepher spelling not verified on a public page.",
+   "source": ""
+  },
+  {
+   "id": "shabbath",
+   "forms": [
+    "Shabbath",
+    "Shabbat"
+   ],
+   "hebrew": "שבת",
+   "pointed": "שַׁבָּת",
+   "pronunciation": "shah-baht",
+   "meaning": "Rest, cessation (Sabbath)",
+   "english": [
+    "sabbath",
+    "Sabbath"
+   ],
+   "confidence": "high",
+   "note": "Cepher Ex 20:11 'Shabbath'.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "sheol",
+   "forms": [
+    "She'ol",
+    "Sheol"
+   ],
+   "hebrew": "שאול",
+   "pointed": "שְׁאוֹל",
+   "pronunciation": "sheh-ohl",
+   "meaning": "The grave, the underworld",
+   "english": [],
+   "confidence": "high",
+   "note": "Cepher Isa 14:9-15. Same letters as Sha'ul.",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "geihinnom",
+   "forms": [
+    "Gey Hinnom",
+    "Gehenna",
+    "Geihinnom",
+    "Gei Hinnom"
+   ],
+   "hebrew": "גיהנום",
+   "pointed": "",
+   "pronunciation": "gay hee-nohm",
+   "meaning": "Valley of Hinnom",
+   "english": [],
+   "confidence": "low",
+   "note": "Cepher's spelling not verified. גיהנום is post-biblical Hebrew; Biblical text writes גי הנם / גי בן הנם.",
+   "source": ""
+  },
+  {
+   "id": "beyt-lechem",
+   "forms": [
+    "Beyt Lechem"
+   ],
+   "hebrew": "בית לחם",
+   "pointed": "בֵּית לֶחֶם",
+   "pronunciation": "bayt leh-khem",
+   "meaning": "House of bread",
+   "english": [
+    "Bethlehem"
+   ],
+   "confidence": "high",
+   "note": "",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  },
+  {
+   "id": "galiyl",
+   "forms": [
+    "Galiyl"
+   ],
+   "hebrew": "גליל",
+   "pointed": "גָּלִיל",
+   "pronunciation": "gah-leel",
+   "meaning": "Circuit, region",
+   "english": [
+    "Galilee"
+   ],
+   "confidence": "high",
+   "note": "",
+   "source": "Verified on cepher.net (Cepher Key / sample pages)"
+  }
+ ]
+}

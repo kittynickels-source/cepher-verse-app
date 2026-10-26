@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Settings</title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<main class="settings"><h1>Settings</h1>
+<label class="row">Mute pronunciation audio <input type="checkbox" id="mute"></label>
+<label class="row">Show Cepher-style names in Bible text <input type="checkbox" id="cepher"></label>
+<label class="row">Default version <select id="version"></select></label>
+<p class="note" id="voices"></p>
+<p class="note">The decryption key is never stored by this page. In the phone app it comes from the Android Keystore / iOS Keychain; on this website you paste the key or pick the key file once per visit (kept in memory only).</p>
+<p><a href="demo.html">Name demo</a></p>
+</main>
+<script src="js/hebrew-reveal.js"></script>
+<script src="js/hebrew-speech.js"></script>
+<script src="js/learn.js"></script>
+<script src="js/bible-data.js"></script>
+<script src="js/app-shell.js"></script>
+<script>
+AppShell.init({ page: 'settings' }).then(function (ctx) {
+  var mute = document.getElementById('mute'), cep = document.getElementById('cepher'), ver = document.getElementById('version');
+  if (!ctx.speaker.supported) { mute.disabled = true; document.getElementById('voices').textContent = 'Speech is not supported in this browser.'; }
+  else ctx.speaker.ready().then(function () {
+    document.getElementById('voices').textContent = ctx.speaker.hasHebrewVoice() ? 'A Hebrew voice is available: the Hebrew is spoken after the pronunciation.' : 'No Hebrew voice on this device: only the English pronunciation is spoken.';
+  });
+  mute.checked = ctx.speaker.isMuted(); mute.onchange = function () { ctx.speaker.setMuted(mute.checked); };
+  cep.checked = ctx.settings.cepherNames(); cep.onchange = function () { ctx.settings.setCepherNames(cep.checked); };
+  BibleData.VERSIONS.forEach(function (v) { var o = document.createElement('option'); o.value = v.id; o.textContent = v.label; ver.appendChild(o); });
+  ver.value = ctx.settings.version(); ver.onchange = function () { ctx.settings.setVersion(ver.value); };
+});
+</script>
+</body>
+</html>

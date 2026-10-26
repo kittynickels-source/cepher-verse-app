@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Learn</title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<main><h1>Learn the names</h1><div id="learn"></div></main>
+<script src="js/hebrew-reveal.js"></script>
+<script src="js/hebrew-speech.js"></script>
+<script src="js/learn.js"></script>
+<script src="js/bible-data.js"></script>
+<script src="js/app-shell.js"></script>
+<script src="js/learn-ui.js"></script>
+<script>
+AppShell.init({ page: 'learn' }).then(function (ctx) { LearnUI.mount(document.getElementById('learn'), ctx); });
+</script>
+</body>
+</html>

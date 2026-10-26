@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Verse of the Day</title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<main>
+<article id="votd" class="card" aria-label="Verse of the day"></article>
+<p class="note">Tap a name for its Hebrew. Tap the verse to read the whole chapter.</p>
+</main>
+<script src="js/hebrew-reveal.js"></script>
+<script src="js/hebrew-speech.js"></script>
+<script src="js/learn.js"></script>
+<script src="js/bible-data.js"></script>
+<script src="js/app-shell.js"></script>
+<script src="js/votd.js"></script>
+<script>
+AppShell.init({ page: 'votd' }).then(function (ctx) {
+  return fetch('verse-refs.json').then(function (r) { return r.json(); }).then(function (d) {
+    return VerseOfTheDay.mount(document.getElementById('votd'), ctx, d.refs);
+  });
+});
+</script>
+</body>
+</html>

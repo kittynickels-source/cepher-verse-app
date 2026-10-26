@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Reader</title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<main id="reader"></main>
+<script src="js/hebrew-reveal.js"></script>
+<script src="js/hebrew-speech.js"></script>
+<script src="js/learn.js"></script>
+<script src="js/bible-data.js"></script>
+<script src="js/app-shell.js"></script>
+<script src="js/reader.js"></script>
+<script>
+AppShell.init({ page: 'reader' }).then(function (ctx) { ChapterReader.mount(document.getElementById('reader'), ctx); });
+</script>
+</body>
+</html>
