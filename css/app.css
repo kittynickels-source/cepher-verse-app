@@ -107,3 +107,8 @@ h1, h2 { font-weight: 600; } h1 { font-size: 1.6rem; margin: .6em 0 .3em; }
 .key-dialog { border: 1px solid var(--line); border-radius: 16px; background: var(--card); color: var(--fg); max-width: 26rem; }
 .key-dialog label { display: block; margin: 10px 0; } .key-dialog input { width: 100%; min-height: 44px; font: inherit; }
 .key-dialog .row { display: flex; gap: 8px; justify-content: flex-end; }
+
+.privlink { margin: 24px 0; padding-top: 8px; border-top: 1px solid var(--line); }
+.privlink .warn { color: var(--fg); }
+.key-dialog .k-note { color: #b3261e; }
+.key-dialog .row { flex-wrap: wrap; }

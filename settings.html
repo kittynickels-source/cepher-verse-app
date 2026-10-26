@@ -18,6 +18,14 @@
 <label class="row">Default version <select id="version"></select></label>
 <p class="note" id="voices"></p>
 <p class="note">The decryption key is never stored by this page. In the phone app it comes from the Android Keystore / iOS Keychain; on this website you paste the key or pick the key file once per visit (kept in memory only).</p>
+<section class="privlink" aria-labelledby="pl-h"><h2 id="pl-h">Private link</h2>
+<p class="note">A private link opens the app already unlocked. The key rides after the “#”, which browsers never send to the website, and the app removes it from the address bar as soon as it opens.</p>
+<p class="note warn"><strong>Anyone with this link can read the Bible files.</strong> Share it only with people you trust — do not post it publicly.</p>
+<p class="note" id="pl-state"></p>
+<label class="row" id="pl-key-row">Key <input type="password" id="pl-key" autocomplete="off" spellcheck="false" placeholder="paste the base64 key"></label>
+<p><button type="button" class="btn primary" id="pl-copy">Copy private link</button></p>
+<p class="note" id="pl-status" aria-live="polite"></p>
+</section>
 <p><a href="demo.html">Name demo</a></p>
 </main>
 <script src="js/hebrew-reveal.js"></script>
@@ -36,6 +44,21 @@ AppShell.init({ page: 'settings' }).then(function (ctx) {
   cep.checked = ctx.settings.cepherNames(); cep.onchange = function () { ctx.settings.setCepherNames(cep.checked); };
   BibleData.VERSIONS.forEach(function (v) { var o = document.createElement('option'); o.value = v.id; o.textContent = v.label; ver.appendChild(o); });
   ver.value = ctx.settings.version(); ver.onchange = function () { ctx.settings.setVersion(ver.value); };
+  var pl = ctx.privateLink, plKey = document.getElementById('pl-key'), plStatus = document.getElementById('pl-status');
+  function plRefresh() {
+    var on = pl.active();
+    document.getElementById('pl-key-row').hidden = on;
+    document.getElementById('pl-state').textContent = on ? 'The Bible files are unlocked for this visit. The link will look like: ' + pl.preview()
+      : 'Paste the key to make a link. It will look like: ' + pl.preview();
+  }
+  plRefresh();
+  document.getElementById('pl-copy').onclick = function () {
+    plStatus.textContent = 'Checking key…';
+    pl.copy(pl.active() ? null : plKey.value).then(function (preview) {
+      plKey.value = ''; plRefresh();
+      plStatus.textContent = 'Copied ' + preview + ' to the clipboard. Do not post it publicly.';
+    }, function (e) { plStatus.textContent = e.message; });
+  };
 });
 </script>
 </body>

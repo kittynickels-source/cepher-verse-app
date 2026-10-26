@@ -37,7 +37,7 @@
       // Tapping the verse (not a Hebrew name) is a doorway to the reader.
       textEl.addEventListener('click', function (ev) {
         if (ev.target.closest('.hr-name') || ev.defaultPrevented) return;
-        doc.defaultView.location.href = href;
+        doc.defaultView.location.href = ctx.linkFor ? ctx.linkFor(href) : href;
       });
       return res;
     }, function (err) { el.querySelector('.votd-text').textContent = 'Could not unlock the Bible files: ' + err.message; throw err; });

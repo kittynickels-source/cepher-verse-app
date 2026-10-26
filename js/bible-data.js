@@ -91,7 +91,7 @@
 
   /** Library: caches one decrypted, grouped version per id; loads on demand. */
   function createLibrary(opts) {
-    var keyProvider = opts.keyProvider, fetchBytes = opts.fetchBytes, cache = new Map(), keyPromise = null;
+    var keyProvider = opts.keyProvider, fetchBytes = opts.fetchBytes, cache = new Map(), keyPromise = null, unlocked = false;
     function key() {
       if (!keyPromise) keyPromise = Promise.resolve(keyProvider.getKey()).then(importKey)
         .catch(function (e) { keyPromise = null; throw e; });
@@ -99,7 +99,10 @@
     }
     function load(id) {
       if (!cache.has(id)) {
-        var p = Promise.all([key(), fetchBytes(id)]).then(function (a) { return decryptBytes(a[1], a[0]); }).then(group);
+        var p = Promise.all([key(), fetchBytes(id)]).then(function (a) { return decryptBytes(a[1], a[0]); }).then(function (rows) {
+          if (!unlocked) { unlocked = true; if (opts.onUnlock) try { opts.onUnlock(); } catch (e) {} }
+          return group(rows);
+        });
         p.catch(function () { cache.delete(id); });
         cache.set(id, p);
       }
@@ -151,6 +154,46 @@
     return best;
   }
 
+  /* ---------- private key link (#key=<base64url>) ---------- */
+  /** Accepts base64 or base64url (padding optional, %-encoding ok). Returns canonical padded base64 of a
+   *  32-byte key, or null if it is not one. */
+  function normalizeKey(s) {
+    if (s == null) return null;
+    s = String(s).trim();
+    try { s = decodeURIComponent(s); } catch (e) { return null; }
+    s = s.replace(/\s+/g, '').replace(/-/g, '+').replace(/_/g, '/').replace(/=+$/, '');
+    if (!/^[A-Za-z0-9+\/]+$/.test(s) || s.length % 4 === 1) return null;
+    while (s.length % 4) s += '=';
+    var bytes; try { bytes = b64ToBytes(s); } catch (e) { return null; }
+    var ok = bytes.length === 32; bytes.fill(0);
+    return ok ? s : null;
+  }
+  function toBase64Url(b64) { return String(b64).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''); }
+  /** "#key=abc&v16" -> {present: true, key: <base64>|null (null = malformed), rest: "v16"}. */
+  function parseHashKey(hash) {
+    var h = String(hash || '').replace(/^#/, ''), present = false, key = null, rest = [];
+    (h ? h.split('&') : []).forEach(function (p) {
+      if (/^key=/i.test(p)) { present = true; key = normalizeKey(p.slice(4)); }
+      else if (p) rest.push(p);
+    });
+    return { present: present, key: present ? key : null, rest: rest.join('&') };
+  }
+  /** Put the key into a link's hash, keeping any other hash part (e.g. reader's #v16). */
+  function withHashKey(href, key) {
+    var i = href.indexOf('#'), base = i < 0 ? href : href.slice(0, i), rest = parseHashKey(i < 0 ? '' : href.slice(i + 1)).rest;
+    return base + '#key=' + toBase64Url(key) + (rest ? '&' + rest : '');
+  }
+  /** Key works only if importKey succeeds AND a real versions file decrypts (GCM tag check). Resolves the CryptoKey. */
+  function validateKey(raw, fetchBytes, id) {
+    return importKey(raw).then(function (k) {
+      return Promise.resolve(fetchBytes(id || 'oeb')).then(function (buf) {
+        var u = new Uint8Array(buf);
+        if (u.length < 12 + 16) throw new Error('File too short');
+        return getSubtle().decrypt({ name: 'AES-GCM', iv: u.slice(0, 12), tagLength: 128 }, k, u.slice(12));
+      }).then(function () { return k; }, function () { throw new Error('This key does not unlock the Bible files'); });
+    });
+  }
+
   /* ---------- key providers ---------- */
   /** Demo: user pastes the base64 key or picks the key file. ui: async () => string|ArrayBuffer */
   function PasteKeyProvider(ui) { return { getKey: function () { return ui(); } }; }
@@ -175,5 +218,6 @@
     importKey: importKey, decryptBytes: decryptBytes, group: group, parseRef: parseRef, createLibrary: createLibrary,
     fallbackChain: fallbackChain, resolveWith: resolveWith, nearestBook: nearestBook,
     PasteKeyProvider: PasteKeyProvider, NativeKeyProvider: NativeKeyProvider,
-    ChainKeyProvider: ChainKeyProvider, browserFetchBytes: browserFetchBytes };
+    ChainKeyProvider: ChainKeyProvider, browserFetchBytes: browserFetchBytes,
+    normalizeKey: normalizeKey, toBase64Url: toBase64Url, parseHashKey: parseHashKey, withHashKey: withHashKey, validateKey: validateKey };
 });
