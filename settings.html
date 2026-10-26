@@ -47,7 +47,7 @@ AppShell.init({ page: 'settings' }).then(function (ctx) {
   var pl = ctx.privateLink, plKey = document.getElementById('pl-key'), plStatus = document.getElementById('pl-status');
   function plRefresh() {
     var on = pl.active();
-    document.getElementById('pl-key-row').hidden = on;
+    document.getElementById('pl-key-row').style.display = on ? 'none' : '';
     document.getElementById('pl-state').textContent = on ? 'The Bible files are unlocked for this visit. The link will look like: ' + pl.preview()
       : 'Paste the key to make a link. It will look like: ' + pl.preview();
   }
