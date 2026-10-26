@@ -52,13 +52,12 @@ AppShell.init({ page: 'settings' }).then(function (ctx) {
       : 'Paste the key to make a link. It will look like: ' + pl.preview();
   }
   plRefresh();
-  document.getElementById('pl-copy').onclick = function () {
-    plStatus.textContent = 'Checking key…';
-    pl.copy(pl.active() ? null : plKey.value).then(function (preview) {
-      plKey.value = ''; plRefresh();
-      plStatus.textContent = 'Copied ' + preview + ' to the clipboard. Do not post it publicly.';
-    }, function (e) { plStatus.textContent = e.message; });
-  };
+  // The copy starts inside the click (see AppShell wireCopy); success or failure is always shown.
+  pl.wire(document.getElementById('pl-copy'), plStatus, function () { return pl.active() ? '' : plKey.value; }, function (ok) {
+    if (ok || pl.active()) plKey.value = '';
+    plRefresh();
+    if (!ok && !pl.active()) plKey.focus();
+  });
 });
 </script>
 </body>

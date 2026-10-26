@@ -112,3 +112,4 @@ h1, h2 { font-weight: 600; } h1 { font-size: 1.6rem; margin: .6em 0 .3em; }
 .privlink .warn { color: var(--fg); }
 .key-dialog .k-note { color: #b3261e; }
 .key-dialog .row { flex-wrap: wrap; }
+.pl-fallback { margin: 8px 0; } .pl-fallback .pl-manual { width: 100%; min-height: 44px; font: inherit; font-size: 16px; margin-bottom: 6px; }
