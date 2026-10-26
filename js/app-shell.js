@@ -106,7 +106,8 @@
       if (p.id === current) a.setAttribute('aria-current', 'page');
       nav.appendChild(a);
     });
-    doc.body.insertBefore(nav, doc.body.firstChild);
+    var banner = doc.querySelector('body > .app-banner');   // the nav goes just below the header banner, if the page has one
+    doc.body.insertBefore(nav, banner ? banner.nextSibling : doc.body.firstChild);
   }
 
   /** Demo key prompt: paste base64 or pick the key file. Key stays in memory only (never stored). */

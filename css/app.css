@@ -113,3 +113,13 @@ h1, h2 { font-weight: 600; } h1 { font-size: 1.6rem; margin: .6em 0 .3em; }
 .key-dialog .k-note { color: #b3261e; }
 .key-dialog .row { flex-wrap: wrap; }
 .pl-fallback { margin: 8px 0; } .pl-fallback .pl-manual { width: 100%; min-height: 44px; font: inherit; font-size: 16px; margin-bottom: 6px; }
+
+/* Header banner (images/alpha-sky-banner-*): full-bleed on phones, centred with rounded corners on wide screens.
+ * Always shown at its natural 1600:455 (≈3.5:1) shape: never cropped or stretched. */
+.app-banner { margin: 0 calc(-1 * max(16px, env(safe-area-inset-right))) 0 calc(-1 * max(16px, env(safe-area-inset-left))); line-height: 0; }
+.app-banner picture, .app-banner img { display: block; width: 100%; }
+.app-banner img { height: auto; aspect-ratio: 1600 / 455; background: #7d8d9b; }
+@media (min-width: 60rem) {
+  .app-banner { max-width: 72rem; margin: 12px auto 0; }
+  .app-banner img { border-radius: 18px; }
+}

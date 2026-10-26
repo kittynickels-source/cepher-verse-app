@@ -11,3 +11,4 @@ Static web build of the Bible verse app: tap a Cepher-style name (Elohiym, Yahua
 - The demo (`demo.html`), the Hebrew bubble and Learn mode work without the key.
 - The Bible texts (KJV, Webster, ASV, WEB, Darby, YLT, BBE, DRA, OEB, BSB) are public domain. BSB: Berean Standard Bible, dedicated to the public domain (text from https://bereanbible.com/bsb.txt).
 - Fonts: Literata and Frank Ruhl Libre, SIL Open Font License 1.1 (see `fonts/`).
+- Header banner: `images/alpha-sky-banner-{800,1600}.{jpg,webp}`, resized from the original `images/alpha-sky-icon.png` (2774 × 789). The square site icons are separate and unchanged.
