@@ -23,7 +23,8 @@
     try { root.history.replaceState(root.history.state, '', loc.pathname + loc.search + (p.rest ? '#' + p.rest : '')); } catch (e) {}
     if (p.key) { session.key = p.key; session.source = 'link'; } else session.hashError = true;
   })();
-  function carryingKey() { return !!(session.key && session.source === 'link'); }
+  // A pasted key is carried too once it has unlocked the files (each page is a fresh load, so memory alone is lost on navigation).
+  function carryingKey() { return !!(session.key && (session.source === 'link' || (session.source === 'paste' && session.verified))); }
   function appBase() { var l = root.location; return l.origin + l.pathname.replace(/[^\/]*$/, ''); }
   var MASK = '\u2022\u2022\u2022\u2022\u2022\u2022';
   function privateLinkPreview() { return appBase() + 'verse-of-the-day.html#key=' + MASK; }
@@ -164,7 +165,7 @@
     function copyPrivateLink(raw, near) {
       var key = raw ? BD.normalizeKey(raw) : session.key;
       if (!key) return Promise.reject(codedError('nokey', raw ? 'That is not a valid key: it must be the 32-byte base64 key.'
-        : 'There is no key on this page yet. Paste the key, then tap Copy private link. (A key pasted on another page is not kept when you change pages.)'));
+        : 'No key yet. Paste the key into the Key field here, then tap Copy private link again.'));
       var link = appBase() + 'verse-of-the-day.html#key=' + BD.toBase64Url(key);
       function adopt() { if (!session.key) { session.key = key; session.source = 'paste'; } if (key === session.key) session.verified = true; }
       var text = session.verified && key === session.key ? link
