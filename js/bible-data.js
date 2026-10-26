@@ -18,7 +18,8 @@
     { id: 'ylt', label: 'YLT', name: "Young's Literal Translation" },
     { id: 'bbe', label: 'BBE', name: 'Bible in Basic English' },
     { id: 'dra', label: 'DRA', name: 'Douay-Rheims (American)' },
-    { id: 'oeb', label: 'OEB', name: 'Open English Bible (partial OT)' }
+    { id: 'oeb', label: 'OEB', name: 'Open English Bible (partial OT)' },
+    { id: 'bsb', label: 'BSB', name: 'Berean Standard Bible' }
   ];
   var FALLBACK_ORDER = VERSIONS.map(function (v) { return v.id; });
   // Books whose chapter/verse numbering differs from the KJV-style references used by verse-refs.json.
